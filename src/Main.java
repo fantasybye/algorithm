@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-       Solution solution = new Solution();
+       Aplusb solution = new Aplusb();
        solution.aplusb(100, -100);
     }
 }
