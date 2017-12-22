@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-       Aplusb solution = new Aplusb();
-       solution.aplusb(100, -100);
+      StrStr solution = new StrStr();
+      System.out.print(solution.strStr("source", "rced"));
     }
 }
