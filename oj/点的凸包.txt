@@ -1,0 +1,222 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class Main{
+    static class Point {
+        private int x, y;// 横纵坐标
+
+        public Point(int x,int y) {
+            this.x=x;
+            this.y=y;
+        }
+
+        public String toString() {
+            return x + " "+ y;
+        }
+
+    }
+    public static  void main(String [] args){
+        Scanner in=new Scanner(System.in);
+        int T=in.nextInt();
+        while(T-- >0){
+            int N=in.nextInt();
+            if(N==0){
+                System.out.println("-1");
+                continue;
+            }else {
+                Point[] points = new Point[N];
+                for (int i = 0; i < N; i++) {
+                    points[i] = new Point(in.nextInt(), in.nextInt());
+                }
+                ConvexHullProblem(points);
+            }
+        }
+    }
+
+
+    static public void ConvexHullProblem(Point[] points) {
+        if(points.length<=2) {
+            System.out.println(-1);
+            return;
+        }
+        boolean isLine=true;
+        for(int i=2;i<points.length;i++){
+           if(PointCal(points[0],points[1],points[i])!=0) {isLine=false; break;}
+        }
+        if(isLine){
+            System.out.println(-1);
+            return;
+        }
+        points = points;
+        Arrays.sort(points, new Comparator<Point>() {
+            @Override
+            public int compare(Point o1, Point o2) {
+                if(o1.x==o2.x) return o1.y-o2.y;
+                return o1.x-o2.x;
+            }
+        });
+        boolean[] visit = new boolean[points.length];
+        recursion(0, points.length - 1,points,visit);// 上包
+        recursion(points.length - 1, 0,points,visit);// 下包
+        boolean flag=false;
+        int last=-1;
+        for(int i=0;i<visit.length;i++){
+            flag|=visit[i];//只要有一个值为true则为true
+            if(visit[i]) last=i;
+
+        }
+        if(!flag) {System.out.println(-1); return ;}
+
+        for(int i=0;i<visit.length;i++){
+            if(visit[i]){
+                System.out.print(points[i]);
+                if(i!=last) System.out.print(", ");
+            }
+
+        }
+
+        System.out.println("");
+
+    }
+
+    /**
+     * @title: recursion
+     * @description: 在凸包的上包或下包中，找使△p_max p1 p_n面积最大的点p_max，并递归
+     * @param begin 直线的起点
+     * @param end   直线的终点 void
+     * @throws:
+     */
+    static void recursion(int begin, int end,Point[] points,boolean[] visit) {
+        // 直线的两端点为凸包的顶点
+        visit[begin] = true;
+        visit[end] = true;
+        //将该条直线上的点设置为true；
+
+        if (begin < end) {
+            boolean flag = false;// 标志直线左侧是否有点
+            int maxArea = 0;// 最大面积
+            int maxAreaindex = begin + 1;// 最大面积的点下标
+
+            for (int i = begin + 1; i <= end - 1; i++) {// begin和end已经是顶点，不需要判断
+                int dis=PointJudge(points[begin], points[end], points[i]);
+                if (dis==0) visit[i]=true;
+                if (dis > 0) {// 点在直线左侧
+                    // 找距离最远的点，因为底相同都是p1 pn，也就是求三角形面积最大的
+                    flag = true;
+                    int area = PointCal(points[begin], points[end], points[i]);
+                    if (area > maxArea) {
+                        maxArea = area;
+                        maxAreaindex = i;
+                    } else if (area == maxArea) {// 若面积相同，取∠p_max p_begin p_end最大的那一个
+                        double degreeA = Degree(points[begin], points[i], points[end]);
+                        double degreeB = Degree(points[begin], points[maxAreaindex], points[end]);
+                        if (degreeA > degreeB) {
+
+                            maxArea = area;
+                            maxAreaindex = i;
+                        }
+                    }
+
+                }
+            }
+
+            // 若直线左侧还有点，则递归；没有点，则结束
+            if (flag == true) {
+                recursion(begin, maxAreaindex,points,visit);
+                recursion(maxAreaindex, end,points,visit);
+            }
+        } else if (begin > end) {
+            boolean flag = false;
+            int maxArea = 0;// 最大面积
+            int maxAreaindex = end + 1;// 最大面积的点下标
+
+            for (int i = begin - 1; i >= end + 1; i--) {// 注意下包循环中的 起始点、终点、判断条件
+                int dis=PointJudge(points[begin], points[end], points[i]);
+                if (dis==0) visit[i]=true;
+                if (dis > 0) {// 点在直线左侧
+                    flag = true;
+                    int area = PointCal(points[begin], points[end], points[i]);
+                    if (area > maxArea) {
+                        maxArea = area;
+                        maxAreaindex = i;
+                    } else if (area == maxArea) {// 若面积相同，取∠p_max p_begin p_end最大的那一个
+                        double degreeA = Degree(points[begin], points[i], points[end]);
+                        double degreeB = Degree(points[begin], points[maxAreaindex], points[end]);
+                        visit[maxAreaindex]=true;
+                        visit[i]=true;
+                        if (degreeA > degreeB) {
+                            maxArea = area;
+                            maxAreaindex = i;
+                        }
+                    }
+
+                }
+            }
+
+            if (flag == true) {
+                recursion(begin, maxAreaindex,points,visit);
+                recursion(maxAreaindex, end,points,visit);
+            }
+        }
+    }
+
+
+    /**
+     * @title: PointCal
+     * @description: 计算行列式的值
+     * @param beginP 直线的开始点
+     * @param p      判断的点
+     * @param endP   直线的终点
+     * @throws:
+     */
+    static private int PointCal(Point beginP, Point endP, Point p) {
+        return beginP.x * endP.y + p.x * beginP.y + endP.x * p.y - p.x * endP.y
+                - endP.x * beginP.y - beginP.x * p.y;
+    }
+
+    /**
+     * @title: PointJudge
+     * @description:返回点p在直线beginP endP的位置
+     * @param beginP
+     * @param p      判断的点
+     * @param endP
+     * @return int ：1在直线左侧，0在线上，-1在右侧
+     * @throws: 注意传参放在第几个，前两个点是直线的两端，第三个是需要判断的点
+     */
+    static  private int PointJudge(Point beginP, Point endP, Point p) {
+        if (PointCal(beginP, endP, p) > 0) {
+            return 1;
+        } else if (PointCal(beginP, endP, p) == 0)
+            return 0;
+        else
+            return -1;
+    }
+
+    /**
+     * @title: Degree
+     * @description: 余弦公式求∠pa pb pc的度数
+     * @param pa 点
+     * @param pb
+     * @param pc
+     * @return double：返回∠c的度数（°为单位）
+     * @throws:
+     */
+    static  double Degree(Point pa, Point pb, Point pc) {
+        double degree = 0;// ∠pa pb pc度数
+
+        // 三角形的三边长
+        double a = Math.sqrt(Math.pow(pa.x - pb.x, 2) + Math.pow(pa.y - pb.y, 2));
+        double b = Math.sqrt(Math.pow(pb.x - pc.x, 2) + Math.pow(pb.y - pc.y, 2));
+        double c = Math.sqrt(Math.pow(pc.x - pa.x, 2) + Math.pow(pc.y - pa.y, 2));
+
+        // 余弦公式求∠pa pb pc度数
+        System.out.println("acos=" + Math.acos((a * a + b * b - c * c) / (2.0 * a * b)));
+        degree = Math.toDegrees(Math.acos((a * a + b * b - c * c) / (2.0 * a * b)));
+        System.out.println("degree=" + degree);
+
+        return degree;
+    }
+
+}

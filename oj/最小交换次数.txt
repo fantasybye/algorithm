@@ -1,0 +1,60 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+/**
+ *
+ * Given an array of N distinct elementsA[ ],  n个不同大的元素
+ * 2
+ * 4
+ * 4 3 2 1
+ * 5
+ * 1 5 4 3 2
+ *
+ *
+ * 求最小交换次数
+ */
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int T = scan.nextInt();//测试数
+        while(T-->0){
+            int length = scan.nextInt();
+            Integer[] array = new Integer[length];//原数组
+            for(int i=0;i<length;i++){
+                array[i] = scan.nextInt();
+            }
+            Integer[] target = array.clone();//目标数组
+            Arrays.sort(target,new Comparator<Integer>(){
+                @Override
+                public int compare(Integer o1,Integer o2){
+                    if(o1>o2){
+                        return 1;
+                    }
+                    if(o1<o2){
+                        return -1;
+                    }
+                    return 0;
+                }
+            });
+            HashMap<Integer,Integer> map = new HashMap<>();
+            for(int i=0;i<length;i++){
+                map.put(target[i],i); //<目标数组元素，其在目标数组的位置>
+            }
+            int result = 0;
+            for(int i=0;i<length;i ++){
+                while(map.get(array[i])!=i){
+                    int temp = array[i];
+                    array[i] = array[map.get(array[i])];
+                    array[map.get(temp)] = temp;
+                    result++;
+                }
+            }
+            System.out.println(result);
+
+        }
+    }
+}

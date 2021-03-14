@@ -1,0 +1,26 @@
+if __name__ == "__main__":
+    T = int(input())
+
+    while T:
+        T -= 1
+        n = int(input())
+        arr = list(map(int, input().split()))
+        queue = [0]
+        while queue:
+            level = []
+            nextQueue = []
+            for i in range(len(queue)):
+                index = queue.pop()
+                level.append(arr[index])
+                if (index * 2 + 1) < n:
+                    nextQueue.append(index * 2 + 1)
+                if (index * 2 + 2) < n:
+                    nextQueue.append(index * 2 + 2)
+            queue = nextQueue
+            res = []
+            level.sort()
+            for i in range(len(level)):
+                if i > 0 and level[i] == level[i-1]:
+                    continue
+                res.append(str(level[i]))
+            print(' '.join(res))

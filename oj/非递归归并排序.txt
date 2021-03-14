@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        while (s.hasNextLine()){
+            int[] arr = handleInput(s);
+            mergeSort(arr);
+            displayArray(arr);
+        }
+    }
+
+    public static int[] handleInput(Scanner s){
+        String str = s.nextLine();
+        String[] sarr = str.split(" ");
+        int[] arr = new int[sarr.length-1];
+        for(int i = 0;i < arr.length; i++){
+            arr[i] = Integer.parseInt(sarr[i+1]);
+        }
+        return arr;
+    }
+    public static void displayArray(int[] arr){
+        for(int i = 0; i < arr.length-1;i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.print(arr[arr.length-1]);
+        System.out.println();
+    }
+    private static void mergePass(int[] arr, int k, int n) {
+        int i = 0;
+
+        while(i < n - 2*k + 1) {
+            merge(arr, i, i + k-1, i + 2*k - 1);
+            i += 2*k;
+        }
+
+        if(i < n - k ) {
+            merge(arr, i, i+k-1, n-1);
+        }
+
+    }
+
+    private static void merge(int[] arr, int low, int mid, int high) {
+        int[] temp = new int[high - low + 1];
+        int i = low;
+        int j = mid+1;
+        int k = 0;
+
+        for(; i <= mid && j <= high; k++){
+            if(arr[i] < arr[j]) {
+                temp[k] = arr[i++];
+            } else {
+                temp[k] = arr[j++];
+            }
+        }
+
+        while(i <= mid) {
+            temp[k++] = arr[i++];
+        }
+        while(j <= high) {
+            temp[k++] = arr[j++];
+        }
+        for(int l = 0; l < temp.length; l++){
+            arr[low + l] = temp[l];
+        }
+    }
+    private static void mergeSort(int[] arr){
+        int len = arr.length;
+        int k = 1;
+
+        while(k < len) {
+            mergePass(arr, k, len);
+            k *= 2;
+        }
+    }
+}

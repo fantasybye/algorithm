@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+/**
+ * 描述：给定N本书，每本书有pi页，需要将书分给M个学生，任务是找到一种分配方式，这种分配方式中分到页数的最大值要小于其他分配方式,打印这个最小值。
+ * 注意：按照顺序进行分配，每本书只能分配给一名学生，每个学生至少分配1本书。
+ * 输入： 第一行：T测试用例数目
+ *       第二行：N 书本数目
+ *       第三行：每本书的页数
+ *       第四行：M学生的数目
+ *
+ *
+ * Sample Input 1
+ * 1
+ * 4
+ * 12 34 67 90
+ * 2
+ * Sample Output 1
+ * 113
+ *
+ *
+ *  此题可以想象把数据按照顺序装入桶中，M即给定的桶数，问桶的容量至少应该为多少才能恰好把这些数装入M个桶中（按照顺序装）
+ * 首先桶的容量一定≥最小数。
+ * 并且随着桶的大小的增加，需要的桶的数量是非递增的；二分查找的特点
+ *
+ *
+ *
+ *
+ */
+
+
+public class Main{
+    public static void  main(String args []){
+        Scanner sc=new Scanner(System.in);
+        int T=sc.nextInt();
+        for(int i=0;i<T;i++){
+            int N=sc.nextInt();
+            int pages[]=new int[N];
+            for(int j=0;j<N;j++){
+                pages[j]=sc.nextInt();
+            }
+            int M=sc.nextInt();
+            if(N<M){
+                //有人分不到书
+                System.out.println(-1);
+                continue;
+            }
+            System.out.println(makeBuckets(pages,M));
+
+        }
+
+    }
+
+    /**
+     * 二分查找 左边界
+     * @param pages
+     * @param m
+     * @return
+     */
+
+    static int makeBuckets(int[] pages,int m){
+        int low=Integer.MIN_VALUE;
+        int high=0;//
+        for(int i=0;i<pages.length;i++){
+            high+=pages[i];
+            if(low<pages[i]){
+                low=pages[i];
+            }
+        }
+
+        //二分查找，查找大于等于getBuckectNum(pages,mid)的最小值
+        while(low<=high){
+            int mid=(low+high)/2;
+            //getBuckectNum 随着mid的增大，单调不增
+            if(getBuckectNum(pages,mid)>m)    low=mid+1;//需要的桶数大于m，表示桶太小，
+            else high=mid-1;//表示桶数小于m，表示桶太大。
+        }
+        return low;
+
+    }
+
+
+
+    /**
+     *  得到桶的数量
+     * @param pages
+     * @param max_buckect
+     * @return
+     */
+
+
+    static  int getBuckectNum(int [] pages,int max_buckect){
+        int num=1;//初始化一个桶的时候。
+        int max=0;
+        for(int i=0;i<pages.length;i++){
+            max+=pages[i];
+            if(max>max_buckect){
+                //桶满了，换一个桶
+                num++;
+                max=pages[i];
+            }
+        }
+        return num;
+    }
+
+}
+
