@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d30a9f9f-ca58-4631-865a-68c317ef6710" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/oj2/Searching_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj2/Searching_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj2/分配问题.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj2/广度优先遍历.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj2/拓扑排序解的个数.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj2/有9个因数的数.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj2/深度优先遍历.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj2/漆狗屋.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj3/区间第k最小.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj3/子矩阵问题.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj3/字符串匹配问题.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj3/对称子字符串.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj3/整除查询.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj3/最长公共子序列.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oj2/按照另一个数组排序.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Atoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atoi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,13 +121,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,7 +155,8 @@
       <workItem from="1513824091144" duration="9360000" />
       <workItem from="1513903373793" duration="6884000" />
       <workItem from="1615170650261" duration="78000" />
-      <workItem from="1615700855024" duration="10277000" />
+      <workItem from="1615700855024" duration="10926000" />
+      <workItem from="1615715022411" duration="339000" />
     </task>
     <servers />
   </component>
