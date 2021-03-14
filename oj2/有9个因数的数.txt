@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    private static final int PRIME_NUM = 0;
+    private static final int NOT_PRIME_NUM = 1;
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int count = s.nextInt();
+        while (count-->0){
+            List<Integer> list = new ArrayList<>();
+            long n = s.nextLong();
+            getPrime(n,list);
+            getCount(n,list);
+        }
+    }
+
+    public static void getPrime(long num, List<Integer> list) {
+
+        int size = (int) Math.sqrt(num);
+        int[] primeTable = new int[size + 1];
+        for (int i = 2; i < primeTable.length; i++) {
+            if (primeTable[i] == PRIME_NUM) {
+                list.add(i);
+                for (int j = 2 * i; j < primeTable.length; j += i) {
+                    primeTable[j] = NOT_PRIME_NUM;
+                }
+            }
+        }
+    }
+
+    public static void getCount(long num, List<Integer> list) {
+        long res = 0;
+        for (int i = 0; i < list.size() - 1; i++) {
+            for (int j = i + 1; j < list.size(); j++) {
+                if (Math.pow(list.get(i) * list.get(j), 2) > num) {
+                    break;
+                }
+                res++;
+            }
+
+        }
+
+        for (Integer integer : list) {
+            if (Math.pow(integer, 8) > num) {
+                break;
+            }
+            res++;
+        }
+        System.out.println(res);
+    }
+}
