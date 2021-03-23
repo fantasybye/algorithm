@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -6,29 +8,54 @@ public class Main {
         int numOftest = scanner.nextInt();
         while (numOftest-->0) {
             int N = scanner.nextInt();
-            int M = scanner.nextInt();
-            int[] K = new int[N];
-            int[] Q = new int[M];
+            int[] x = new int[N];
+            int[] y = new int[N];
             for(int i = 0;i<N;i++){
-                K[i] = scanner.nextInt();
+                x[i] = scanner.nextInt();
+                y[i] = scanner.nextInt();
             }
-            for(int i = 0;i < M;i++){
-                Q[i] = scanner.nextInt();
-            }
-            for(int i = 0;i < M - 1;i++){
-                System.out.print(countDivisibility(Q[i],K) + " ");
-            }
-            System.out.print(countDivisibility(Q[M - 1],K));
-            System.out.println();
+            func(N, x, y);
+        }
+    }
+    static class Position{
+        int x;
+        int y;
+        Position(int x, int y){
+            this.x = x;
+            this.y = y;
         }
     }
 
-    private static int countDivisibility(int qi, int[] K){
-        int res = 0;
-        for(int i = 0;i < K.length;i++){
-            if(K[i] % qi == 0)
-                res++;
+    private static void func(int n, int[] x, int[] y){
+        Map<Integer, Integer> xmap = new HashMap<>();
+        Map<Integer, Integer> ymap = new HashMap<>();
+        Map<Position, Integer> xymap = new HashMap<>();
+
+        for(int i = 0 ; i < n ; i ++){
+            int countx = xmap.getOrDefault(x[i], 0);
+            countx++;
+            xmap.put(x[i], countx);
+
+            int county = ymap.getOrDefault(y[i], 0);
+            county++;
+            ymap.put(y[i], county);
+
+            Position position = new Position(x[i], y[i]);
+            int countxy = xymap.getOrDefault(position, 0);
+            countxy ++;
+            xymap.put(position, countxy);
         }
-        return res;
+
+        int res = 0;
+        for (Integer i: xmap.values()){
+            res += i*(i-1)/2;
+        }
+        for(Integer i : ymap.values()){
+            res += i*(i-1)/2;
+        }
+        for(Integer i : xymap.values()){
+            res -= i*(i-1)/2;
+        }
+        System.out.println(res);
     }
 }

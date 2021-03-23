@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d30a9f9f-ca58-4631-865a-68c317ef6710" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/数字重组整除问题.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/数字重组整除问题.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/整除查询.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/整除查询.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/能否成环.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/能否成环.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oj3/和最大的连续降序字符.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/和最大的连续降序字符.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oj3/牛的繁殖问题.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/牛的繁殖问题.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oj3/距离问题.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/距离问题.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +117,7 @@
       <workItem from="1615773924899" duration="4187000" />
       <workItem from="1615987295890" duration="1631000" />
       <workItem from="1616066316533" duration="4514000" />
-      <workItem from="1616499102043" duration="4597000" />
+      <workItem from="1616499102043" duration="6744000" />
     </task>
     <servers />
   </component>
@@ -137,22 +136,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615206797961" />
-    <state width="1860" height="293" key="GridCell.Tab.0.bottom" timestamp="1616073285226">
+    <state width="1860" height="293" key="GridCell.Tab.0.bottom" timestamp="1616508891816">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
-    <state width="1860" height="293" key="GridCell.Tab.0.center" timestamp="1616073285226">
+    <state width="1860" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616508891816" />
+    <state width="1860" height="293" key="GridCell.Tab.0.center" timestamp="1616508891815">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
-    <state width="1860" height="293" key="GridCell.Tab.0.left" timestamp="1616073285226">
+    <state width="1860" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616508891815" />
+    <state width="1860" height="293" key="GridCell.Tab.0.left" timestamp="1616508891815">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
-    <state width="1860" height="293" key="GridCell.Tab.0.right" timestamp="1616073285226">
+    <state width="1860" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616508891815" />
+    <state width="1860" height="293" key="GridCell.Tab.0.right" timestamp="1616508891816">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
+    <state width="1860" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616508891816" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1615815082664">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
