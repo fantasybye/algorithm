@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d30a9f9f-ca58-4631-865a-68c317ef6710" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/区间第k最小.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/区间第k最小.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/子矩阵问题.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/子矩阵问题.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/对称子字符串.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/对称子字符串.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oj3/数字重组整除问题.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/数字重组整除问题.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oj3/整除查询.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/整除查询.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oj3/能否成环.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/能否成环.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/algorithm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -49,6 +49,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -73,6 +74,17 @@
     <configuration name="bubbleSortSolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bubbleSortSolution" />
       <module name="algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,7 +117,8 @@
       <workItem from="1615623836723" duration="604000" />
       <workItem from="1615773924899" duration="4187000" />
       <workItem from="1615987295890" duration="1631000" />
-      <workItem from="1616066316533" duration="1063000" />
+      <workItem from="1616066316533" duration="4514000" />
+      <workItem from="1616499102043" duration="4597000" />
     </task>
     <servers />
   </component>
@@ -124,22 +137,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615206797961" />
-    <state width="1860" height="293" key="GridCell.Tab.0.bottom" timestamp="1616066397470">
+    <state width="1860" height="293" key="GridCell.Tab.0.bottom" timestamp="1616073285226">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616066397470" />
-    <state width="1860" height="293" key="GridCell.Tab.0.center" timestamp="1616066397470">
+    <state width="1860" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
+    <state width="1860" height="293" key="GridCell.Tab.0.center" timestamp="1616073285226">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616066397470" />
-    <state width="1860" height="293" key="GridCell.Tab.0.left" timestamp="1616066397470">
+    <state width="1860" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
+    <state width="1860" height="293" key="GridCell.Tab.0.left" timestamp="1616073285226">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616066397470" />
-    <state width="1860" height="293" key="GridCell.Tab.0.right" timestamp="1616066397470">
+    <state width="1860" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
+    <state width="1860" height="293" key="GridCell.Tab.0.right" timestamp="1616073285226">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616066397470" />
+    <state width="1860" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616073285226" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1615815082664">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -168,11 +181,6 @@
           <url>file://$PROJECT_DIR$/src/StrStr.java</url>
           <line>23</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

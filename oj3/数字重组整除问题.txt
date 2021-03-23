@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numOftest = scanner.nextInt();
+        scanner.nextLine();
+        for (int i = 0; i < numOftest; i++) {
+            String num = scanner.nextLine();
+            char[] charArray = num.toCharArray();
+            ArrayList<String> res = new ArrayList<>();
+            findAllPermutations(0,charArray.length-1,charArray,res);
+            if(res.size()==0){
+                System.out.println("Not Possible");
+            } else {
+                System.out.println(res.stream().max(new Comparator<String>() {
+                    @Override
+                    public int compare(String o1, String o2) {
+                        return o1.compareTo(o2);
+                    }
+                }).get());
+            }
+        }
+    }
+
+    private static void findAllPermutations(int l, int r,char[] s,ArrayList<String> res){
+        if(l==r){
+            StringBuilder out = new StringBuilder();
+            for(char c: s){
+                out.append(c);
+            }
+
+            long num = Long.parseLong(out.toString());
+            if(num%17==0 && num!=0){
+                res.add(out.toString());
+            }
+            return;
+        }
+
+        for(int i=l;i<=r;i++){
+            swap(s,l,i);
+            findAllPermutations(l+1,r,s,res);
+            swap(s,l,i);
+        }
+    }
+
+    private static void swap(char[] c, int i, int j){
+        char temp = c[i];
+        c[i] = c[j];
+        c[j] = temp;
+    }
+}

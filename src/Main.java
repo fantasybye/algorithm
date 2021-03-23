@@ -1,45 +1,34 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int count = s.nextInt();
-        s.nextLine();
-        while(count-->0) {
-            int n = s.nextInt();
-            int m = s.nextInt();
-            int[][] arr = new int[n][m];
-            for(int i = 0;i < n;i++){
-                for (int j = 0;j < m;j++){
-                    arr[i][j] = s.nextInt();
-                }
+        Scanner scanner = new Scanner(System.in);
+        int numOftest = scanner.nextInt();
+        while (numOftest-->0) {
+            int N = scanner.nextInt();
+            int M = scanner.nextInt();
+            int[] K = new int[N];
+            int[] Q = new int[M];
+            for(int i = 0;i<N;i++){
+                K[i] = scanner.nextInt();
             }
-            System.out.println(getMaxMatrix(arr));
+            for(int i = 0;i < M;i++){
+                Q[i] = scanner.nextInt();
+            }
+            for(int i = 0;i < M - 1;i++){
+                System.out.print(countDivisibility(Q[i],K) + " ");
+            }
+            System.out.print(countDivisibility(Q[M - 1],K));
+            System.out.println();
         }
     }
 
-    public static int getMaxMatrix(int[][] matrix) {
-        int max=Integer.MIN_VALUE;
-        int dp=0,start=0;
-        int ans=0;//结果
-        int[] sum=null;//纵向累加数组
-        for(int i=0;i<matrix.length;i++) {
-            sum=new int[matrix[0].length];
-            for(int j=i;j<matrix.length;j++) {
-                dp=0;start=0;
-                for(int k=0;k<sum.length;k++) {
-                    sum[k]+=matrix[j][k];
-                    dp+=sum[k];
-                    if(max<dp) {
-                        ans = (j-i)*(k-start);
-                        max=dp;
-                    }
-                    if(dp<0) {
-                        dp=0;start=k+1;
-                    }
-                }
-            }
+    private static int countDivisibility(int qi, int[] K){
+        int res = 0;
+        for(int i = 0;i < K.length;i++){
+            if(K[i] % qi == 0)
+                res++;
         }
-        return ans;
+        return res;
     }
 }
