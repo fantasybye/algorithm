@@ -4,9 +4,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-//todo 还没看
-public class 最长公共子序列 {
-//https://blog.csdn.net/qq_36770641/article/details/81463895
+public class Main {
 
     private static int T;
 
