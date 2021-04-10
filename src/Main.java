@@ -7,40 +7,36 @@ public class Main {
         int count = s.nextInt();
         while(count-->0){
             int n = s.nextInt();
-            int m = s.nextInt();
-            int[] road1 = new int[n];
-            int[] road2 = new int[m];
+            int[] ddl = new int[n];
+            int[] profit = new int[n];
             for(int i = 0; i < n; i++){
-                road1[i] = s.nextInt();
+                s.nextInt();
+                ddl[i] = s.nextInt();
+                profit[i] = s.nextInt();
             }
-            for(int i = 0; i < m; i++){
-                road2[i] = s.nextInt();
-            }
-            System.out.println(findMaxPath(n,m,road1,road2));
+            maxProfit(n,ddl,profit);
         }
     }
-    public static int findMaxPath(int n,int m,int[] road1,int[] road2) {
-        int i = 0, j = 0, sum1 = 0, sum2 = 0, sum = 0;
+    public static void maxProfit(int n,int[] ddl,int[] profit) {
+        int[] timeProfit = new int[n];
+        int max = 0,sum = 0,count = 0,id=0;
         while (true) {
-            while (i < n && j < m && road1[i] != road2[j]) {
-                if (road1[i] < road2[j])
-                    sum1 += road1[i++];
-                else if (road1[i] > road2[j])
-                    sum2 += road2[j++];
+            for (int i = 0; i < n; i++) {
+                timeProfit[i] = ddl[i] <= 0 ? 0 : profit[i] / ddl[i];
+                if(max < timeProfit[i]){
+                    max = timeProfit[i];
+                    id = i;
+                }else
+                    ddl[i]--;
             }
-            if (i < n && j < m) {
-                sum1 += road1[i++];
-                sum2 += road2[j++];
-                sum += Math.max(sum1, sum2);
-                sum1 = 0;
-                sum2 = 0;
-            }else if(i < n){
-                sum1 += road1[i++];
-            }else if(j < m){
-                sum2 += road2[j++];
+            if(max > 0){
+                count++;
+                sum+=profit[id];
+                ddl[id] = 0;
+                max = 0;
             }else{
-                sum += Math.max(sum1, sum2);
-                return sum;
+                System.out.println(count+" "+ sum);
+                break;
             }
         }
     }
