@@ -2,54 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d30a9f9f-ca58-4631-865a-68c317ef6710" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/oj1/shell排序.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/书本分发.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/二叉树.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/倒置个数.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/冒泡排序.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/分治法解最近对问题.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/合并数组.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/和为定值的子数组.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/宠物屋涂色.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/序号乘方.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/按照数值个数排序.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/插入排序.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/数学公式.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/最小交换次数.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/棋盘覆盖.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/点的凸包.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/计数排序.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/非递归归并排序.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj1/非递归快排.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj4/按照要求保留数组元素使得和最大.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj4/数组查询.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj4/无重复字符子集问题.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj4/是否能通过考试.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj4/最小化初始点.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj4/矩阵计算.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oj4/花最少的钱购买蔬菜.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oj5/格子里的整数.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oj5/路上的球.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/shell排序.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/书本分发.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/二叉树.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/倒置个数.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/冒泡排序.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/分治法解最近对问题.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/合并数组.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/和为定值的子数组.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/宠物屋涂色.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/序号乘方.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/按照数值个数排序.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/插入排序.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/数学公式.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/最小交换次数.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/棋盘覆盖.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/点的凸包.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/计数排序.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/非递归归并排序.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj/非递归快排.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/最长公共子序列.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/最长公共子序列.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oj3/能否成环.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oj3/能否成环.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/algorithm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -122,13 +78,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,56 +134,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="699" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617509023951">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="699" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1617509023951" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1615206797961">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615206797961" />
-    <state width="1860" height="293" key="GridCell.Tab.0.bottom" timestamp="1617016768523">
-      <screen x="-1920" y="-130" width="1920" height="1050" />
-    </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-130.1920.1050@-1920.-130.1920.1050" timestamp="1617016768523" />
-    <state width="1860" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616513091209" />
-    <state width="1860" height="293" key="GridCell.Tab.0.center" timestamp="1617016768523">
-      <screen x="-1920" y="-130" width="1920" height="1050" />
-    </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-130.1920.1050@-1920.-130.1920.1050" timestamp="1617016768523" />
-    <state width="1860" height="293" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616513091209" />
-    <state width="1860" height="293" key="GridCell.Tab.0.left" timestamp="1617016768523">
-      <screen x="-1920" y="-130" width="1920" height="1050" />
-    </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-130.1920.1050@-1920.-130.1920.1050" timestamp="1617016768523" />
-    <state width="1860" height="293" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616513091208" />
-    <state width="1860" height="293" key="GridCell.Tab.0.right" timestamp="1617016768523">
-      <screen x="-1920" y="-130" width="1920" height="1050" />
-    </state>
-    <state width="1860" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-130.1920.1050@-1920.-130.1920.1050" timestamp="1617016768523" />
-    <state width="1860" height="293" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1616513091209" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1615815082664">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615815082664" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1615815082664">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615815082664" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1615815082664">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615815082664" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1615815082664">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615815082664" />
-    <state x="461" y="169" key="SettingsEditor" timestamp="1615988052343">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050/-1920.-130.1920.1050@0.0.1920.1050" timestamp="1615988052343" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -233,6 +141,16 @@
           <url>file://$PROJECT_DIR$/src/StrStr.java</url>
           <line>23</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
